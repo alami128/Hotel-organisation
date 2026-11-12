@@ -8,8 +8,23 @@
  * @author simo
  */
 public enum MenuOption {
-    SORT , SEARCH , ADD_RECORD , CREATE_TREE , EXIT;
+    SORT(1,"SORT") ,
+    SEARCH(2,"SEARCH") ,
+    ADD_RECORD(3,"ADD_RECORD") , 
+    CREATE_TREE(4,"CREATE_TREE") ,
+    EXIT(5,"EXIT");
+   
+private final int number ; 
+private final String label ;
+
+MenuOption ( int number , String label) {
+    this.number = number ;
+    this.label = label ;
     
+            
+}
+    
+   
     
     
 }
