@@ -31,8 +31,20 @@ MenuOption ( int number , String label) {
         return label;
     }
     
-}
-   
+  
+    public static MenuOption fromNumber(int number) {
+        for (MenuOption option : values()) {
+            if (option.number == number) {
+                return option;
+            }
+        }
+        return null;
+    }
+
+    public static void printMenu() {
+        for (MenuOption option : values()) {
+            System.out.println(option.number + ". " + option.label);
+        }
+    }
+} 
     
-    
-}
