@@ -17,4 +17,8 @@ public enum ManagerType {
     private final String title;
 
    
+    ManagerType(int number, String title) {
+        this.number = number;
+        this.title = title;
+}
 }
