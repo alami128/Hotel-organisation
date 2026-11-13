@@ -21,4 +21,11 @@ public enum ManagerType {
         this.number = number;
         this.title = title;
 }
-}
+
+public int getNumber() {
+        return number;
+    }
+
+    public String getTitle() {
+        return title;
+    }
