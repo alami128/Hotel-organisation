@@ -1,0 +1,17 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Enum.java to edit this template
+ */
+
+/**
+ *
+ * @author simo
+ */
+public enum ManagerType {
+   
+    HEAD_MANAGER(1, "Head Manager"),
+    ASSISTANT_MANAGER(2, "Assistant Manager"),
+    TEAM_LEAD(3, "Team Lead");
+
+   
+}
