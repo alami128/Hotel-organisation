@@ -28,4 +28,18 @@ public int getNumber() {
 
     public String getTitle() {
         return title;
+    }   public static ManagerType fromNumber(int number) {
+        for (ManagerType type : values()) {
+            if (type.number == number) {
+                return type;
+            }
+        }
+        return null;
     }
+
+    public static void printOptions() {
+        for (ManagerType type : values()) {
+            System.out.println(type.number + ". " + type.title);
+        }
+    }
+}
