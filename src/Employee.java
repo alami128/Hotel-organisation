@@ -8,7 +8,8 @@
  * @author simo
  */
 public abstract class Employee {
-    private String firstName;
+    
+private String firstName;
     private String lastName;
     private Department department;
     private Manager manager;   // stays null if the person is not a manager
