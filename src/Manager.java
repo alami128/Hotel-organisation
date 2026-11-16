@@ -45,5 +45,23 @@ class HeadManager extends Manager {
     }
 }
 
+class AssistantManager extends Manager {
+    public AssistantManager() {
+        super("Assistant Manager");
+    }
 
+    public String getResponsibility() {
+        return "Supports the head manager";
+    }
+}
+
+class TeamLead extends Manager {
+    public TeamLead() {
+        super("Team Lead");
+    }
+
+    public String getResponsibility() {
+        return "Leads a small team";
+    }
+}
 
