@@ -39,5 +39,47 @@ public abstract class Department {
             if (valid.equalsIgnoreCase(wanted)) {
                 return new OperationsDepartment(valid);
             }
+            
         }
 
+      for (String valid : supportNames) {
+            if (valid.equalsIgnoreCase(wanted)) {
+                return new SupportDepartment(valid);
+            }
+        }
+        for (String valid : commercialNames) {
+            if (valid.equalsIgnoreCase(wanted)) {
+                return new CommercialDepartment(valid);
+            }
+        }
+        return null;
+    }
+}
+       class OperationsDepartment extends Department {
+       public OperationsDepartment(String name) {
+           super(name);
+    }
+
+    public String getCategory() {
+        return "Operations";
+    }
+}
+class SupportDepartment extends Department {
+    public SupportDepartment(String name) {
+        super(name);
+    }
+
+    public String getCategory() {
+        return "Support";
+    }
+}
+
+class CommercialDepartment extends Department {
+    public CommercialDepartment(String name) {
+        super(name);
+    }
+
+    public String getCategory() {
+        return "Commercial";
+    }
+}
