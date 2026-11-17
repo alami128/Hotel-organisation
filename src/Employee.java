@@ -51,5 +51,58 @@ private String firstName;
       public String getSortKey() {
         return (lastName + " " + firstName).toLowerCase();
     }
-
+      
+          // Each employee type says what kind of contract it has
+    public abstract String getEmploymentType();
+    
+    // Builds the right employee type from the Position column in the file
+    public static Employee createEmployee(String firstName, String lastName, String position,
+                                          Department department, Manager manager) {
+        {
+        String text = position.trim().toLowerCase();
+        if (text.equals("intern")) {
+            return new InternEmployee(firstName, lastName, department, manager);
+        } else if (text.equals("contract")) {
+            return new ContractEmployee(firstName, lastName, department, manager);
+        }
+        return new FullTimeEmployee(firstName, lastName, department, manager);
+    }
+    }
+    public String toString() {
+        return getFullName() + " | " + getManagerTitle() + " | "
+                + department.getName() + " | " + getEmploymentType();
+    }
 }
+
+class FullTimeEmployee extends Employee {
+    public FullTimeEmployee(String firstName, String lastName, Department department, Manager manager) {
+        super(firstName, lastName, department, manager);
+    }
+
+    public String getEmploymentType() {
+        return "Full-time";
+    }
+}
+
+class ContractEmployee extends Employee {
+    public ContractEmployee(String firstName, String lastName, Department department, Manager manager) {
+        super(firstName, lastName, department, manager);
+    }
+
+    public String getEmploymentType() {
+        return "Contract";
+    }
+}
+
+class InternEmployee extends Employee {
+    public InternEmployee(String firstName, String lastName, Department department, Manager manager) {
+        super(firstName, lastName, department, manager);
+    }
+
+    public String getEmploymentType() {
+        return "Intern";
+    }
+}
+    
+
+
