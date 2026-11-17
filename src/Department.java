@@ -7,7 +7,25 @@
  *
  * @author simo
  */
+
+import java.util.ArrayList;
+
 public abstract class Department {
+
+         // Returns every valid department name, so the menu can list them as numbers
+    public static ArrayList<String> getAllNames() {
+        ArrayList<String> names = new ArrayList<>();
+        for (String name : operationsNames) {
+            names.add(name);
+        }
+        for (String name : supportNames) {
+            names.add(name);
+        }
+        for (String name : commercialNames) {
+            names.add(name);
+        }
+        return names;
+    }
     
     private String name;
 
@@ -77,6 +95,21 @@ class SupportDepartment extends Department {
 class CommercialDepartment extends Department {
     public CommercialDepartment(String name) {
         super(name);
+    }
+    
+        // Returns every valid department name, so the menu can list them as numbers
+    public static ArrayList<String> getAllNames() {
+        ArrayList<String> names = new ArrayList<>();
+        for (String name : operationsNames) {
+            names.add(name);
+        }
+        for (String name : supportNames) {
+            names.add(name);
+        }
+        for (String name : commercialNames) {
+            names.add(name);
+        }
+        return names;
     }
 
     public String getCategory() {
